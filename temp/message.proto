@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+message Message {
+	string authorization = 1; 
+	int64 destinationId = 2;   
+	string destinationType = 3;   
+	string messageType = 4; 
+	int32 code = 5;  
+	string message = 6;  
+	string clientType = 7;  
+	string clientMessageId = 8; 
+	int64 systemTime = 9;
+	string path = 10;
+	bytes content = 11; 
+}
+
+
+message MessageContent {
+	string id = 1;    
+	string content = 2;  
+	string contentType = 3; 
+	int64 createTime = 4; 
+	int64 userId = 5;  
+	string userName = 6; 
+	string userIcon = 7; 
+}
+
+message UserInfo {
+	int64 id = 1;  
+	string icon = 2;  
+	string nickname = 3; 
+}
+

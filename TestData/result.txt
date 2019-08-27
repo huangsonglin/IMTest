@@ -1,0 +1,32 @@
+When thread is: 10000, Duration is:30 seconds, WaitTime is: 0.05 seconds and send area is txt.
+Message sent successfully: 1514; Message received successfully: 1515
+Whether messages sent and received are lost: False
+The total running time is: 117103.31999999999 ms
+The total sending time is 59951.79999999999 ms
+The total time accepted is 57266.17 ms.
+Because of thread receiving problem (data receiving after heartbeat is sent misses), the missed message is always: 1 
+,the missed message id is:5154:5155:202
+Data analysis of receiving, sending and receiving information is as follows:                
+mean   77.398096
+std    21.034748
+min    38.900000
+25%    68.790000
+50%    76.730000
+75%    83.800000
+max   665.230000
+Send message data is analyzed as follows:                
+mean   39.598283
+std     6.461080
+min    34.910000
+25%    38.100000
+50%    39.030000
+75%    39.940000
+max   279.250000
+Recv message data is analyzed as follows:                
+mean   37.824419
+std    19.567595
+min     0.000000
+25%    29.890000
+50%    36.900000
+75%    44.857500
+max   624.280000

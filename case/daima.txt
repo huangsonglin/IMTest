@@ -1,0 +1,27 @@
+send_csv_read = pd.read_csv(send_result_file, index_col=False, header=None)
+    SendDF = pd.DataFrame(send_csv_read)
+    send_error_data = SendDF.loc[0:][(SendDF[1] != 200)]
+    send_success_data = SendDF.loc[0:][(SendDF[1] == 200)]
+    send_error_rate = '%.2f%%' % (len(send_error_data) / len(SendDF) * 100)
+    send_TimeLength = send_success_data[0:][2]
+    send_success_time_length = np.array(send_TimeLength)
+    # send max responseTime
+    send_maxTime = send_success_time_length.max()
+    # min responseTime
+    send_minTime = send_success_time_length.min()
+    # avage responseTime
+    send_avageTime = send_success_time_length.mean()
+    # median responseTime
+    send_medianTime = np.median(send_success_time_length)
+    send_sumTime = np.sum(SendDF.loc[0:][2])
+    # 是否漏收消息
+
+    print(f'Note: time is in milliseconds!!!')
+    print(
+        f'When thread is equal to {threadnum} and Duration equal {duration} seconds and send area is txt,'
+        f' the total running time is: \t{send_sumTime} ms')
+    print(f'Error percentage is: \t{send_error_rate}')
+    print(f'The maximum response time is: \t{send_maxTime} ms')
+    print(f'The minimum response time is: \t{send_minTime} ms')
+    print(f'The average response time is: \t{round(send_avageTime, 2)} ms')
+    print(f'The median of response time is: \t{round(send_medianTime, 2)} ms')
