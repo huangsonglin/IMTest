@@ -15,6 +15,7 @@ from temp.message_pb2 import Message, MessageContent
 from until.mysql import Mysql
 from until.token import get_token
 from google.protobuf.json_format import MessageToJson
+from concurrent.futures import ThreadPoolExecutor, wait
 
 file = rootPath + r'\TestData\token.txt'
 class wirte_token:
@@ -22,9 +23,14 @@ class wirte_token:
     TokenList = []
 
     def tokenList():
-        for username in range(19900000000, 19900000050):
-            Token = get_token(username, 123456)
+        threads = []
+        pool = ThreadPoolExecutor(max_workers=50)
+        for username in range(40000000000, 40000000050):
+            f = pool.submit(get_token, username, 123456)
+            threads.append(f)
+            Token = f.result()
             TokenList.append({"token": "%s" % Token, "username": "%d" % username})
+        wait(threads)
         with open(file, 'w') as f:
             for tokenInfo in TokenList:
                 f.write(str(tokenInfo))
@@ -96,7 +102,7 @@ class Message_Protobuf():
         :param clientType:  device type. "ANDRIOD" or "IOS"
         :return:            protobuf data
         """
-        index = abs(int(username) - 19900000000)
+        index = abs(int(username) - 40000000000)
         message = Message()
         message.messageType = "CONNECT"
         message.authorization = self.tokenList[index]['token']
@@ -113,7 +119,7 @@ class Message_Protobuf():
         :param touserId:        message recverId
         :return:
         """
-        index = abs(int(fromusername) - 19900000000)
+        index = abs(int(fromusername) - 40000000000)
         userInfos = Mysql().sql_result(f'select id, name, icon from user where username={fromusername}')
         mcontent = MessageContent()
         message = Message()
@@ -134,10 +140,12 @@ class Message_Protobuf():
         return proto_message
 
     def HEARTBEAT(self, username, clientType):
-        index = abs(int(username) - 19900000000)
+        index = abs(int(username) - 40000000000)
         message = Message()
         message.messageType = "HEARTBEAT"
         message.authorization = self.tokenList[index]['token']
         message.clientType = clientType
         proto_message = message.SerializeToString()
         return proto_message
+
+wirte_token.tokenList()

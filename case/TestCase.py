@@ -19,6 +19,7 @@ import json
 import threading
 import multiprocessing
 import emoji
+import queue
 from shutil import copyfile
 from temp.message_pb2 import *
 from temp.protomsg import *
@@ -26,6 +27,7 @@ from until.length import length
 from until.chinese import chineseText
 from until.readTxt import read_file
 from concurrent.futures import ThreadPoolExecutor, wait
+
 
 global File
 File = file
@@ -94,14 +96,18 @@ class Function():
         data = self.client.recv(self.length)
 
     # 接收消息
-    def Recv(self, username):
+    def Recv(self, username, num):
+        pool = ThreadPoolExecutor(max_workers=num)
+        threads = []
         self.Link(username)
         btime = time.time()
         while True:
             sf = open(self.recv_datafile, 'a', encoding='utf-8')
             beforetime = time.time()
-            data = self.client.recv(self.length)
+            f = pool.submit(self.client.recv, self.length)
             aftertime = time.time()
+            data = f.result()
+            threads.append(f)
             recvtime = round((aftertime - beforetime) * 1000, 2)
             if not data:
                 break
@@ -134,6 +140,7 @@ class Function():
                 self.heartbeat(username)
                 btime = atime + 1
             sf.close()
+        wait(threads)
         self.close()
 
 # 采用线程池方式接收消息
@@ -163,7 +170,7 @@ def Function_concurrent_sendmessage(concurrentNum, tousername):
                 contenType = "TXT"
         else:
             contenType = "TXT"
-        fromuser = random.randint(19900000000, 19900000049)
+        fromuser = random.randint(40000000000, 40000000049)
         f1 = pool.submit(Function().Send, fromuser, contenType, content, int(memberId), "IOS")
         futures.append(f1)
     wait(futures)
@@ -171,9 +178,9 @@ def Function_concurrent_sendmessage(concurrentNum, tousername):
 # 多线程并发压力测试函数
 def Function_thread_testing(threaNum, internTime, duration):
     threads = []
-    tousername = random.randint(19900000000, 19900000049)
+    tousername = random.randint(40000000000, 40000000049)
     memberId = Mysql().reslut_replace(f'select id from user where username={tousername}')
-    recvThread =  threading.Thread(target=Function().Recv, args=(tousername, ))
+    recvThread =  threading.Thread(target=Function().Recv, args=(tousername, threaNum))
     threads.append(recvThread)
     sendThread = threading.Thread(target=Function_concurrent_sendmessage, args=(threaNum, tousername ))
     threads.append(sendThread)
@@ -190,6 +197,8 @@ def Result_concurrent_testing(threadnum, internTime, duration):
         sf.truncate()
     with open(recv_result_file, 'w') as rf:
         rf.truncate()
+    with open(result_file, 'w') as ref:
+        ref.truncate()
     systime = datetime.datetime.now()
     endtime = systime + datetime.timedelta(seconds=duration)
     while (systime <= endtime):
@@ -276,5 +285,5 @@ def Result_concurrent_testing(threadnum, internTime, duration):
 
 if __name__ == '__main__':
     # wirte_token.tokenList()
-    Result_concurrent_testing(10000, 0.05, 30)
+    Result_concurrent_testing(2000, 0.05, 60)
 

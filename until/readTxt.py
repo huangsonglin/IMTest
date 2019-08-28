@@ -17,10 +17,12 @@ def read_file(file):
     if os.path.exists(file):
         with open(file, encoding='utf-8') as f:
             for line in f.readlines():
-                line = line.replace('\n', '')
-                json_data = (eval(line))
-                data.append(json_data)
+                if line != '\n':
+                    line = line.replace('\n', '')
+                    json_data = (eval(line))
+                    data.append(json_data)
         return data
     else:
         raise FileExistsError("文件不存在")
 
+read_file(r'D:\TestWork\DCIM\TestData\recv_data.txt')
