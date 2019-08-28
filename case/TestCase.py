@@ -264,13 +264,13 @@ def Result_concurrent_testing(threadnum, internTime, duration):
                 f"{'; '.join(lowrecv)}")
         f.write('\n')
         f.write('Data analysis of receiving, sending and receiving information is as follows:')
-        f.write(str(TotalResult[1:]))
+        f.write(str(TotalResult))
         f.write('\n')
         f.write('Send message data is analyzed as follows:')
-        f.write(str(sendResult[1:]))
+        f.write(str(sendResult))
         f.write('\n')
         f.write('Recv message data is analyzed as follows:')
-        f.write(str(recvResult[1:]))
+        f.write(str(recvResult))
         f.write('\n')
 
 
