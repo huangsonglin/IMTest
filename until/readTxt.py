@@ -25,4 +25,3 @@ def read_file(file):
     else:
         raise FileExistsError("文件不存在")
 
-read_file(r'D:\TestWork\DCIM\TestData\recv_data.txt')

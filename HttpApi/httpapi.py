@@ -8,6 +8,10 @@ curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
 import requests
+import datetime, time
+from until.token import get_token
+
+
 
 class Message_Controller():
 
@@ -49,7 +53,7 @@ class Chat_Room_Controller():
         self.timeout = 3
 
     # 查询聊天室消息 - -查询给定时间之前的消息, 返回数据按时间升序排列, beforeDate 默认系统当前时间
-    def backward(self, Authorization, chatRoomId, beforeDate, size):
+    def backward(self, Authorization, chatRoomId, beforeDate=str(int(time.time())), size=10):
         self.headers.update(Authorization=Authorization)
         url = self.host + '/chatRoom/backward'
         data = {"chatRoomId": chatRoomId, "beforeDate": beforeDate, "size": size}
@@ -240,7 +244,7 @@ class Chat_Group_Controlle:
 
 # 用户好友管理 : User Controller
 class User_Controller:
-    def __init__(self):
+    def __init__(self, clientType, version):
         self.clientType = clientType
         self.version = version
         self.host = 'http://139.196.57.60:9090'
@@ -259,7 +263,7 @@ class User_Controller:
         return req
 
     # GET /user/backward 查询和用户的聊天消息--查询给定时间之前的消息,返回数据按时间升序排列, beforeDate 默认系统当前时间
-    def backward(self, Authorization, userId, beforeDate, size):
+    def backward(self, Authorization, userId, beforeDate=None, size=20):
         self.headers.update(Authorization=Authorization)
         url = self.host + '/user/backward'
         data = {"userId": userId, "beforeDate": beforeDate, "size": size}
@@ -275,14 +279,14 @@ class User_Controller:
         return req
 
     # GET /user/delete/{withUserId} 删除和某个用户的私聊信息
-    def delete(self, Authorization, withUserId):
+    def delete_withuser(self, Authorization, withUserId):
         self.headers.update(Authorization=Authorization)
         url = self.host + f'/user/delete/{withUserId}'
         req = requests.get(url, headers=self.headers, timeout=self.timeout)
         return req
 
     # GET /user/forward 查询和用户的聊天消息--查询给定时间之后的消息,返回数据按时间升序排列
-    def forward(self, Authorization, userId, afterDate, size):
+    def forward(self, Authorization, userId, afterDate, size=20):
         self.headers.update(Authorization=Authorization)
         url = self.host + '/user/backward'
         data = {"userId": userId, "afterDate": afterDate, "size": size}
@@ -298,14 +302,14 @@ class User_Controller:
         return req
 
     # GET /user/session/delete/{withUserId} 删除和某个用户的会话框
-    def delete(self, Authorization, withUserId):
+    def delete_session_withuser(self, Authorization, withUserId):
         self.headers.update(Authorization=Authorization)
         url = self.host + f'/user/session/delete/{withUserId}'
         req = requests.get(url, headers=self.headers, timeout=self.timeout)
         return req
 
     # GET /user/user/delete 用户删除私聊信息
-    def delete(self, Authorization, messageIds):
+    def delete_message(self, Authorization, messageIds):
         self.headers.update(Authorization=Authorization)
         url = self.host + '/user/user/delete'
         data = {"messageIds": messageIds}
@@ -336,4 +340,8 @@ class User_Controller:
 
 
 
-
+if __name__ == '__main__':
+    token = 'Bearer ' + 'ba6e50d3-fc93-43bc-b3f9-a3d1f9dbf475'
+    systime_timestamp = int(datetime.datetime.now().timestamp() * 1000)
+    result = User_Controller('IOS', '5.0.0').delete_message(token, ["5141:5256:10"])
+    print(result.status_code, result.text)

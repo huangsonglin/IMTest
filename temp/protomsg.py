@@ -147,5 +147,3 @@ class Message_Protobuf():
         message.clientType = clientType
         proto_message = message.SerializeToString()
         return proto_message
-
-wirte_token.tokenList()
