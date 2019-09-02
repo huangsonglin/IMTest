@@ -325,10 +325,11 @@ class User_Controller:
         return req
 
     # GET /user/{withUserId} 查询私聊消息
-    def withUserId(self, Authorization, withUserId):
+    def withUserId(self, Authorization, withUserId, ids):
         self.headers.update(Authorization=Authorization)
         url = self.host + f'/user/{withUserId}'
-        req = requests.get(url, headers=self.headers, timeout=self.timeout)
+        data = {"ids": ids}
+        req = requests.get(url, params=data, headers=self.headers, timeout=self.timeout)
         return req
 
     # GET /user/{withUserId}/withdraw/{messageId} 撤销私聊消息

@@ -16,7 +16,7 @@ import math
 from HttpApi.httpapi import *
 from until.readTxt import read_file
 from until.mysql import Mysql
-from until.mogo import mgdb
+from until.mogo import mgdb, return_mgdb
 from concurrent.futures import ThreadPoolExecutor, wait
 
 class unitest_http_api(unittest.TestCase):
@@ -29,14 +29,14 @@ class unitest_http_api(unittest.TestCase):
 
 
 	def setUp(self):
-		self.fp.write('=' * 100 + '\n')
+		pass
 
 	def tearDown(self):
-		self.fp.write('=' * 100 + '\n')
 		self.fp.close()
 
 	# 查询某用户的聊天列表
 	def test_001_Message_Controller_chat(self):
+		self.fp.write('=' * 100 + '\n')
 		userInfos = random.choice(read_file(self.tokenfile))
 		username = userInfos['username']
 		token = "Bearer % s" %(userInfos['token'])
@@ -54,9 +54,11 @@ class unitest_http_api(unittest.TestCase):
 			self.fp.write(f'======查询某用户的聊天列表测试结果：True======\n')
 		except:
 			self.fp.write(f'======查询某用户的聊天列表测试结果：False======\n')
+		self.fp.write('=' * 100 + '\n')
 
 	# 查询与某人的历史聊天记录(给定时间之前的消息)
 	def test_002_User_Controller_backward(self):
+		self.fp.write('=' * 100 + '\n')
 		userInfos = random.choice(read_file(self.tokenfile))
 		username = userInfos['username']
 		token = "Bearer % s" % (userInfos['token'])
@@ -78,9 +80,11 @@ class unitest_http_api(unittest.TestCase):
 			self.fp.write(f'======查询与某人的历史聊天记录(给定时间之前的消息)：True======\n')
 		except:
 			self.fp.write(f'======查询与某人的历史聊天记录(给定时间之前的消息)：False======\n')
+		self.fp.write('=' * 100 + '\n')
 
 	# 查询与某人的历史聊天记录(给定时间之前的消息)
 	def test_003_User_Controller_forward(self):
+		self.fp.write('=' * 100 + '\n')
 		userInfos = random.choice(read_file(self.tokenfile))
 		username = userInfos['username']
 		token = "Bearer % s" % (userInfos['token'])
@@ -102,10 +106,12 @@ class unitest_http_api(unittest.TestCase):
 			self.fp.write(f'======查询与某人的历史聊天记录(给定时间之后的消息)：True======\n')
 		except:
 			self.fp.write(f'======查询与某人的历史聊天记录(给定时间之后的消息)：False======\n')
-			pass
+		self.fp.write('=' * 100 + '\n')
+
 
 	# 删除和某个用户的私聊信息
 	def test_004_User_Controller_delete_withuser(self):
+		self.fp.write('=' * 100 + '\n')
 		userInfos = random.choice(read_file(self.tokenfile))
 		username = userInfos['username']
 		token = "Bearer % s" % (userInfos['token'])
@@ -124,9 +130,11 @@ class unitest_http_api(unittest.TestCase):
 			self.fp.write(f'======删除和某个用户的私聊信息：True======\n')
 		except:
 			self.fp.write(f'======删除和某个用户的私聊信息：False======\n')
+		self.fp.write('=' * 100 + '\n')
 
 	# 用户删除某条私聊消息
 	def test_005_User_Controller_delete_message(self):
+		self.fp.write('=' * 100 + '\n')
 		userInfos = random.choice(read_file(self.tokenfile))
 		username = userInfos['username']
 		token = "Bearer % s" % (userInfos['token'])
@@ -142,14 +150,109 @@ class unitest_http_api(unittest.TestCase):
 				newMessageIds.append(data)
 		ErrorMessage = [newMessageIds[0], f'-1:{int(memberId)+1}:1']
 		testData = [InMessage, ErrorMessage]
-		for data in testData:
-			req = User_Controller(self.clientType, self.version).delete_message(token, data)
-			if len(data) != 0:
+		try:
+			for data in testData:
+				req = User_Controller(self.clientType, self.version).delete_message(token, data)
+				if len(data) != 0:
+					self.assertEqual(req.status_code, 200)
+					for messageid in data:
+						sql = {'_id': messageid}
+						mgr = mgdb('userMessage:%s.' %memberId, sql, '_id', 1)
+						self.assertEqual(len(mgr), 0)
+			self.fp.write(f'======用户删除某条私聊消息：True======\n')
+		except:
+			self.fp.write(f'======用户删除某条私聊消息：False======\n')
+		self.fp.write('=' * 100 + '\n')
+
+	# 删除和某个用户的会话框
+	def test_006_delete_session_withuser(self):
+		self.fp.write('=' * 100 + '\n')
+		userInfos = random.choice(read_file(self.tokenfile))
+		username = userInfos['username']
+		token = "Bearer % s" % (userInfos['token'])
+		memberId = Mysql().reslut_replace(f'select id from user where username={username}')
+		mgresult = return_mgdb('userMessage:%s.' %memberId)
+		# 聊条记录session
+		sessionList = mgresult.distinct("sessionId")
+		to_userId = str(random.choice(list(range(5152, 5201)) + list(range(5248, 5297))))
+		if int(to_userId) > int(memberId):
+			rex = f'{memberId}:{to_userId}'
+		else:
+			rex = f'{to_userId}:{memberId}'
+		req = User_Controller(self.clientType, self.version).delete_session_withuser(token, to_userId)
+		try:
+			assert req.status_code == 200
+			self.fp.write(f'======删除和某个用户的会话框：True======\n')
+		except:
+			self.fp.write(f'======删除和某个用户的会话框：False======\n')
+		self.fp.write('=' * 100 + '\n')
+
+	# 查询私聊消息
+	def test_007_user_withuser(self):
+		"""
+		只要ids存在则查询出对应得结果， 如果不存在时，则不返回
+		:return:
+		"""
+		self.fp.write('=' * 100 + '\n')
+		userInfos = random.choice(read_file(self.tokenfile))
+		username = userInfos['username']
+		token = "Bearer % s" % (userInfos['token'])
+		memberId = Mysql().reslut_replace(f'select id from user where username={username}')
+		to_userId = str(random.choice(list(range(5152, 5201)) + list(range(5248, 5297))))
+		if int(to_userId) > int(memberId):
+			rex = f'{memberId}:{to_userId}'
+		else:
+			rex = f'{to_userId}:{memberId}'
+		sql = {"_id": re.compile(rex)}
+		db = return_mgdb('userMessage:%s.' % memberId)
+		messageList = db.find(sql).distinct('_id')
+		ids = []
+		for messageid in messageList:
+			ids.append(messageid.split(":")[-1])
+		rightId = random.sample(ids, math.ceil(len(ids)/5))
+		datas = [None, rightId, rightId+["-1"]]
+		for data in datas:
+			req = User_Controller(self.clientType, self.version).withUserId(token, to_userId, data)
+			if data == None:
+				self.assertNotEqual(req.status_code, 200)
+			elif len(data) == 0:
+				pass
+			else:
 				self.assertEqual(req.status_code, 200)
-				for messageid in data:
-					sql = {'_id': messageid}
-					mgr = mgdb('userMessage:%s.' %memberId, sql, '_id', 1)
-					self.assertEqual(len(mgr), 0)
+				for mid in data:
+					indx = data.index(mid)
+					if mid in ids:
+						content = db.find({"_id": f"%s:{mid}" % rex}).distinct('content')
+						self.assertEqual(f"u'{req.json()[indx]['content']}'", f"u'{content[0]}'")
+		self.fp.write('=' * 100 + '\n')
+
+	# 撤销私聊消息
+	def test_008_exit_message(self):
+		# self.fp.write('=' * 100 + '\n')
+		userInfos = random.choice(read_file(self.tokenfile))
+		username = userInfos['username']
+		token = "Bearer % s" % (userInfos['token'])
+		memberId = Mysql().reslut_replace(f'select id from user where username={username}')
+		to_userId = str(random.choice(list(range(5152, 5201)) + list(range(5248, 5297))))
+		if int(to_userId) > int(memberId):
+			rex = f'{memberId}:{to_userId}'
+		else:
+			rex = f'{to_userId}:{memberId}'
+		sql = {"_id": re.compile(rex)}
+		db = return_mgdb('userMessage:%s.' % memberId)
+		messageList = db.find(sql).distinct('_id')
+		ids = []
+		for mid in messageList:
+			ids.append(mid.split(":")[-1])
+		if len(ids) == 0:
+			pass
+		else:
+			messageId = random.choice(ids)
+			req = User_Controller(self.clientType, self.version).exit_message(token, to_userId, None)
+
+
+
+
 
 
 

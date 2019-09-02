@@ -37,3 +37,19 @@ def mgdb(table, sql, *keyword):
 		raise ValueError('参数错误')
 	return result
 
+def return_mgdb(table):
+	# 请求连接mogo
+	mg = pmg.MongoClient(host, port)
+	# 使用数据库
+	db = mg['im']
+	# 获取数据库下表集合
+	stbs = db.list_collection_names()
+	# 连接某文档/表
+	stb = db[table]
+	return stb
+
+if __name__ == '__main__':
+	sql = {"_id": "5260:5291:2"}
+	messageList = return_mgdb('userMessage:%s.' % 5260)
+	res = messageList.find(sql, {"_id":0, "content": 1}).distinct("content")
+	print(res)
