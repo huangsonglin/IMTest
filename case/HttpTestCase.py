@@ -124,7 +124,7 @@ class unitest_http_api(unittest.TestCase):
 				rex = f'{memberId}:{to_userId}'
 			else:
 				rex = f'{to_userId}:{memberId}'
-			sql = {{"_id":re.compile(rex)}}
+			sql = {"_id":re.compile(rex)}
 			mgresult = mgdb('userMessage:%s.' %memberId, sql, "createTime", -1)
 			self.assertEqual(len(mgresult), 0, msg="删除与他人得私聊信息功能正常")
 			self.fp.write(f'======删除和某个用户的私聊信息：True======\n')
