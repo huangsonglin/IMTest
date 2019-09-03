@@ -1,6 +1,38 @@
-====================================================================================================
-======查询某用户的聊天列表测试结果：True======
-====================================================================================================
+When thread is: 2000, Duration is:60 seconds, WaitTime is: 0.05 seconds and send area is txt.
+Message sent successfully: 1949; Message received successfully: 1936
+Whether messages sent and received are lost: False
+The total running time is: 83400.76 ms
+The total sending time is 79189.34 ms
+The total time accepted is 4826.81 ms.
+Because of thread receiving problem (data receiving after heartbeat is sent misses), the missed message is always: 13 
+,the missed message id is:5272:5297:5; 5270:5297:7; 5284:5297:22; 5265:5297:25; 5264:5297:29; 5278:5297:23; 5278:5297:24; 5265:5297:26; 5273:5297:17; 5248:5297:20; 5275:5297:23; 5273:5297:18; 5260:5297:66
+Data analysis of receiving, sending and receiving information is as follows:                  
+count  1936.000000
+mean     43.078905
+std      20.778056
+min      36.880000
+25%      39.890000
+50%      40.890000
+75%      41.967500
+max     855.710000
+Send message data is analyzed as follows:                  
+count  1949.000000
+mean     40.630754
+std       3.555337
+min      36.860000
+25%      38.900000
+50%      39.900000
+75%      40.900000
+max      83.810000
+Recv message data is analyzed as follows:                  
+count  1936.000000
+mean      2.493187
+std      20.309116
+min       0.000000
+25%       0.000000
+50%       1.000000
+75%       1.000000
+max     815.820000
 ====================================================================================================
 ======查询某用户的聊天列表测试结果：True======
 ====================================================================================================

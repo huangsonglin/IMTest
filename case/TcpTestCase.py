@@ -283,9 +283,6 @@ def Result_concurrent_testing(threadnum, internTime, duration):
         f.write('\n')
 
 
-if __name__ == '__main__':
-    wirte_token.tokenList()
-    # time.sleep(5)
-    # Result_concurrent_testing(2000, 0.05, 60)
+
 
 
