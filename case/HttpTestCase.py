@@ -32,7 +32,7 @@ class unitest_http_api(unittest.TestCase):
 		pass
 
 	def tearDown(self):
-		self.fp.close()
+		pass
 
 	# 查询某用户的聊天列表
 	def test_001_Message_Controller_chat(self):
@@ -249,6 +249,9 @@ class unitest_http_api(unittest.TestCase):
 		else:
 			messageId = random.choice(ids)
 			req = User_Controller(self.clientType, self.version).exit_message(token, to_userId, None)
+
+	def test_009(self):
+		self.fp.close()
 
 
 
