@@ -338,11 +338,3 @@ class User_Controller:
         url = self.host + f'/user/{withUserId}/withdraw/{messageId}'
         req = requests.get(url, headers=self.headers, timeout=self.timeout)
         return req
-
-
-
-if __name__ == '__main__':
-    token = 'Bearer ' + 'ba6e50d3-fc93-43bc-b3f9-a3d1f9dbf475'
-    systime_timestamp = int(datetime.datetime.now().timestamp() * 1000)
-    result = User_Controller('IOS', '5.0.0').delete_message(token, ["5141:5256:10"])
-    print(result.status_code, result.text)

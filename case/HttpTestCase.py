@@ -248,7 +248,8 @@ class unitest_http_api(unittest.TestCase):
 			pass
 		else:
 			messageId = random.choice(ids)
-			req = User_Controller(self.clientType, self.version).exit_message(token, to_userId, None)
+			req = User_Controller(self.clientType, self.version).exit_message(token, to_userId, memberId)
+			self.assertEqual(req.status_code , 200)
 
 	def test_009(self):
 		self.fp.close()

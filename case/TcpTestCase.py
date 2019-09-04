@@ -35,6 +35,7 @@ send_result_file = rootPath + r'\TestData\send_data.txt'
 recv_result_file = rootPath + r'\TestData\recv_data.txt'
 result_file = rootPath + r'\TestData\result.txt'
 host = "139.196.57.60"
+# host = "192.168.50.115"
 port = 9999
 
 
@@ -56,7 +57,7 @@ class Function():
     # request tcp_link
     def Link(self, username):
         message = Message_Protobuf(File).link(username, "IOS")
-        send_message = "$_".encode() + length(str(len(message))).encode() + message +"_$".encode()
+        send_message = "$_".encode() + length(len(message)) + message +"_$".encode()
         self.client.send(send_message)
         recv_data = self.client.recv(self.client.getsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF))
         recv_data = recv_data[2:-2].split(b'\x00\x00\x00')[1].replace(b'%"',  b'\n')
@@ -66,9 +67,9 @@ class Function():
     # send message
     def Send(self, fromusername, contentType, contentTxt, touserId, clientType):
         message = Message_Protobuf(File).send(fromusername, contentType, contentTxt, touserId, clientType)
-        send_message = "$_".encode() + length(str(len(message))).encode() + message + "_$".encode()
+        send_message = "$_".encode() + length(len(message)) + message + "_$".encode()
         befortime = time.time()
-        self.client.send(send_message)
+        self.client.sendall(send_message)
         recv_data = self.client.recv(self.length)
         aftertime = time.time()
         recv_data = recv_data[6: -2]
@@ -91,7 +92,7 @@ class Function():
     # Send Heartbeat
     def heartbeat(self, username):
         message = Message_Protobuf(File).HEARTBEAT(username, "IOS")
-        send_message = "$_".encode() + length(str(len(message))).encode() + message + "_$".encode()
+        send_message = "$_".encode() + length(len(message)) + message + "_$".encode()
         self.client.send(send_message)
         data = self.client.recv(self.length)
 
@@ -158,7 +159,7 @@ def Function_concurrent_sendmessage(concurrentNum, tousername):
     pool = ThreadPoolExecutor(max_workers=concurrentNum)
     futures = []
     for i in range(concurrentNum):
-        TXT = [chineseText(random.randint(1, 256)),
+        TXT = [chineseText(random.randint(1, 3288)),
                ''.join(random.sample(list(emoji.unicode_codes.EMOJI_UNICODE.values()), 10)),
                json.dumps({"width": 1280, "url": "0D6DD481-EB5B-428C-99D5-F1C9FA612573.JPG", "height": 960})]
         content = random.choice(TXT)
@@ -281,8 +282,3 @@ def Result_concurrent_testing(threadnum, internTime, duration):
         f.write('Recv message data is analyzed as follows:')
         f.write(str(recvResult))
         f.write('\n')
-
-
-
-
-

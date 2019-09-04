@@ -147,3 +147,6 @@ class Message_Protobuf():
         message.clientType = clientType
         proto_message = message.SerializeToString()
         return proto_message
+
+
+# message = Message_Protobuf(File).send(fromusername, contentType, contentTxt, touserId, clientType)
