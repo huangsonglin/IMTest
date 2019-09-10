@@ -15,7 +15,7 @@ sys.path.append(rootPath)
 def read_file(file):
     data = []
     if os.path.exists(file):
-        with open(file, encoding='utf-8') as f:
+        with open(file, encoding='utf-8', errors='ignore') as f:
             for line in f.readlines():
                 if line != '\n':
                     line = line.replace('\n', '')

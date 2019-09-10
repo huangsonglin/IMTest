@@ -149,4 +149,3 @@ class Message_Protobuf():
         return proto_message
 
 
-# message = Message_Protobuf(File).send(fromusername, contentType, contentTxt, touserId, clientType)

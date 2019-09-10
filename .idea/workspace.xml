@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c2b25b3-fe7e-4751-870c-484c346f0f5c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/until/img.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/until/qiniu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HttpApi/httpapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/HttpApi/httpapi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestData/recv_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestData/recv_data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestData/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestData/result.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestData/send_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestData/send_data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestData/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestData/token.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/HttpTestCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/HttpTestCase.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/TcpTestCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TcpTestCase.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/runcase.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/runcase.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/protomsg.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/protomsg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/until/length.py" beforeDir="false" afterPath="$PROJECT_DIR$/until/length.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/until/readTxt.py" beforeDir="false" afterPath="$PROJECT_DIR$/until/readTxt.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +22,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/DCIM$Unittests_for_HttpTestCase_unitest_http_api_test_002_User_Controller_backward.coverage" NAME="Unittests for HttpTestCase.unitest_http_api.test_002_User_Controller_backward Coverage Results" MODIFIED="1567392899075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/DCIM$readTxt.coverage" NAME="readTxt Coverage Results" MODIFIED="1567479226235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/until" />
+    <SUITE FILE_PATH="coverage/DCIM$readTxt.coverage" NAME="readTxt Coverage Results" MODIFIED="1568010136481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/until" />
     <SUITE FILE_PATH="coverage/DCIM$TestCase_One.coverage" NAME="TestCase_One Coverage Results" MODIFIED="1565854173546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/DCIM$img.coverage" NAME="img Coverage Results" MODIFIED="1568009828301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/until" />
     <SUITE FILE_PATH="coverage/DCIM$Unittests_for_HttpTestCase_unitest_http_api.coverage" NAME="Unittests for HttpTestCase.unitest_http_api Coverage Results" MODIFIED="1567393012384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DcIM$connect.coverage" NAME="connect Coverage Results" MODIFIED="1565172033315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DCIM$Unittests_in_HttpTestCase_py.coverage" NAME="Unittests in HttpTestCase.py Coverage Results" MODIFIED="1567392756400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
@@ -32,14 +33,15 @@
     <SUITE FILE_PATH="coverage/DCIM$proto_message.coverage" NAME="proto_message Coverage Results" MODIFIED="1566355281656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
     <SUITE FILE_PATH="coverage/DCIM$text.coverage" NAME="text Coverage Results" MODIFIED="1567504072928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$length.coverage" NAME="length Coverage Results" MODIFIED="1567575682736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/until" />
-    <SUITE FILE_PATH="coverage/DCIM$test.coverage" NAME="test Coverage Results" MODIFIED="1567576492583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/DCIM$TcpTestCase.coverage" NAME="TcpTestCase Coverage Results" MODIFIED="1567576814770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/DCIM$test.coverage" NAME="test Coverage Results" MODIFIED="1568022302573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/until" />
+    <SUITE FILE_PATH="coverage/DCIM$TcpTestCase.coverage" NAME="TcpTestCase Coverage Results" MODIFIED="1568022651283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$Unittests_for_HttpTestCase_unitest_http_api_test_004_User_Controller_deleteMessage.coverage" NAME="Unittests for HttpTestCase.unitest_http_api.test_004_User_Controller_deleteMessage Coverage Results" MODIFIED="1567152908823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$Unittests_for_HttpTestCase_unitest_http_api_test_004_User_Controller_delete_message.coverage" NAME="Unittests for HttpTestCase.unitest_http_api.test_004_User_Controller_delete_message Coverage Results" MODIFIED="1567157824137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/DCIM$qiniu.coverage" NAME="qiniu Coverage Results" MODIFIED="1568023761606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/until" />
     <SUITE FILE_PATH="coverage/DCIM$TestCase_Two.coverage" NAME="TestCase_Two Coverage Results" MODIFIED="1566184610396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$NewTestCase.coverage" NAME="NewTestCase Coverage Results" MODIFIED="1566892739243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$TestCase.coverage" NAME="TestCase Coverage Results" MODIFIED="1567387556504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/DCIM$protomsg.coverage" NAME="protomsg Coverage Results" MODIFIED="1567564202354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
+    <SUITE FILE_PATH="coverage/DCIM$protomsg.coverage" NAME="protomsg Coverage Results" MODIFIED="1568014501450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
     <SUITE FILE_PATH="coverage/DCIM$httpapi.coverage" NAME="httpapi Coverage Results" MODIFIED="1567157504826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HttpApi" />
     <SUITE FILE_PATH="coverage/DCIM$reprot.coverage" NAME="reprot Coverage Results" MODIFIED="1565774037823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
     <SUITE FILE_PATH="coverage/DcIM$add_message.coverage" NAME="add_message Coverage Results" MODIFIED="1565171709578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -50,7 +52,7 @@
     <SUITE FILE_PATH="coverage/DCIM$Unittests_for_HttpTestCase_unitest_http_api_test_007_user_withuser.coverage" NAME="Unittests for HttpTestCase.unitest_http_api.test_007_user_withuser Coverage Results" MODIFIED="1567408790680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$sever.coverage" NAME="sever Coverage Results" MODIFIED="1565333218650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
     <SUITE FILE_PATH="coverage/DCIM$Unittests_for_HttpTestCase_unitest_http_api_test_003_User_Controller_backward.coverage" NAME="Unittests for HttpTestCase.unitest_http_api.test_003_User_Controller_backward Coverage Results" MODIFIED="1567146590029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/DCIM$runcase.coverage" NAME="runcase Coverage Results" MODIFIED="1567576005341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/DCIM$runcase.coverage" NAME="runcase Coverage Results" MODIFIED="1568077772242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$Unittests_for_HttpTestCase_unitest_http_api_test_008_exit_message.coverage" NAME="Unittests for HttpTestCase.unitest_http_api.test_008_exit_message Coverage Results" MODIFIED="1567495880870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$Unittests_for_HttpTestCase_unitest_http_api_test_003_User_Controller_forward.coverage" NAME="Unittests for HttpTestCase.unitest_http_api.test_003_User_Controller_forward Coverage Results" MODIFIED="1567149101070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/DCIM$chinese.coverage" NAME="chinese Coverage Results" MODIFIED="1566352619160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/until" />
@@ -112,10 +114,10 @@
     <session id="-7031873">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
-          <entry key="project.open.time.0" value="9" />
+          <entry key="project.closed" value="24" />
+          <entry key="project.open.time.0" value="10" />
           <entry key="project.open.time.1" value="6" />
-          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -123,38 +125,40 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="169" />
           <entry key="dummy" value="50" />
-          <entry key="py" value="31096" />
-          <entry key="txt" value="178" />
+          <entry key="py" value="34324" />
+          <entry key="txt" value="183" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSV" value="169" />
-          <entry key="PLAIN_TEXT" value="228" />
-          <entry key="Python" value="31095" />
+          <entry key="PLAIN_TEXT" value="233" />
+          <entry key="Python" value="34323" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="JPG" value="1" />
           <entry key="csv" value="26" />
-          <entry key="py" value="197" />
+          <entry key="py" value="225" />
           <entry key="pyi" value="11" />
-          <entry key="txt" value="46" />
+          <entry key="txt" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="26" />
-          <entry key="PLAIN_TEXT" value="46" />
-          <entry key="Python" value="197" />
+          <entry key="Image" value="1" />
+          <entry key="PLAIN_TEXT" value="53" />
+          <entry key="Python" value="225" />
           <entry key="PythonStub" value="11" />
         </counts>
       </usages-collector>
@@ -163,48 +167,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case/HttpTestCase.py">
+        <entry file="file://$PROJECT_DIR$/HttpApi/httpapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-95">
-              <caret line="242" column="30" lean-forward="true" selection-start-line="242" selection-start-column="30" selection-end-line="242" selection-end-column="30" />
-              <folding>
-                <element signature="e#106#115#0" expanded="true" />
-                <marker date="1567495773195" expanded="true" signature="804:814" ph="..." />
-                <marker date="1567495773195" expanded="true" signature="812:814" ph="..." />
-              </folding>
+            <state relative-caret-position="775">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/case/TcpTestCase.py">
+        <entry file="file://$PROJECT_DIR$/case/runcase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="99" column="34" lean-forward="true" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
-              <folding>
-                <element signature="e#107#121#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/until/length.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-              <folding>
-                <marker date="1567576618143" expanded="true" signature="123:262" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/socket.pyi">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="557" column="8" selection-start-line="557" selection-start-column="8" selection-end-line="557" selection-end-column="8" />
+            <state relative-caret-position="250">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -212,8 +187,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp/protomsg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="138" column="51" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
+            <state relative-caret-position="561">
+              <caret line="151" selection-start-line="151" selection-end-line="151" />
               <folding>
                 <element signature="e#105#116#0" expanded="true" />
               </folding>
@@ -222,19 +197,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case/runcase.py">
+        <entry file="file://$PROJECT_DIR$/TestData/result.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HttpApi/httpapi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="340" lean-forward="true" selection-start-line="340" selection-end-line="340" />
+            <state relative-caret-position="300">
+              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -246,7 +212,50 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestData/send_data.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/case/TcpTestCase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="317" column="58" selection-start-line="317" selection-start-column="58" selection-end-line="317" selection-end-column="58" />
+              <folding>
+                <element signature="e#107#121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/until/qiniu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="722">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/internals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118900">
+              <caret line="4840" selection-start-line="4840" selection-end-line="4840" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/frame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7200">
+              <caret line="378" selection-start-line="378" selection-end-line="378" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -260,12 +269,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>5169:5187:238</find>
-      <find>5169:5199:188</find>
-      <find>heartnum</find>
-      <find>recvfrom</find>
-      <find>Recv</find>
-      <find>19900000000</find>
       <find>19900000049</find>
       <find>'Code': 0</find>
       <find>HEARTBEAT_ACK</find>
@@ -290,12 +293,19 @@
       <find>print</find>
       <find>40000000049</find>
       <find>length</find>
+      <find>e</find>
+      <find>f&quot;{u'{str(result)}'}&quot;</find>
+      <find>f&quot;{u'{str(result)'}&quot;</find>
+      <find>sendMessage</find>
+      <find>5264:5280:11</find>
+      <find>'createTime': 1568014653165, 'userId': 5262</find>
     </findStrings>
     <replaceStrings>
       <replace>40000000000</replace>
       <replace>40000000049</replace>
       <replace>199</replace>
       <replace>400</replace>
+      <replace>u'%s' % str(result)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -303,15 +313,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/case/TcpTestCase.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/temp/message_pb2.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/until/qiniu.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/until/send_email.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/case/runcase.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/until/length.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/temp/message_pb2.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/case/HttpTestCase.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/until/img.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/until/readTxt.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/HttpApi/httpapi.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/until/token.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/until/mogo.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/temp/protomsg.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/case/runcase.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -341,27 +354,29 @@
         <option value="$PROJECT_DIR$/temp/token.txt" />
         <option value="$PROJECT_DIR$/until/chinese.py" />
         <option value="$PROJECT_DIR$/temp/proto_message.py" />
-        <option value="$PROJECT_DIR$/until/qiniu.py" />
         <option value="$PROJECT_DIR$/case/NewTestCase.py" />
         <option value="$PROJECT_DIR$/http/httpapi.py" />
         <option value="$PROJECT_DIR$/case/TestCase.py" />
-        <option value="$PROJECT_DIR$/TestData/token.txt" />
         <option value="C:/Program Files/Python36/Lib/site-packages/pymongo/collection.py" />
         <option value="$PROJECT_DIR$/until/mogo.py" />
         <option value="$PROJECT_DIR$/case/run.py" />
         <option value="$PROJECT_DIR$/until/send_email.py" />
         <option value="$PROJECT_DIR$/TestData/result.txt" />
         <option value="$PROJECT_DIR$/case/HttpTestCase.py" />
-        <option value="$PROJECT_DIR$/until/readTxt.py" />
-        <option value="$PROJECT_DIR$/TestData/recv_data.txt" />
         <option value="$PROJECT_DIR$/case/text.py" />
         <option value="$PROJECT_DIR$/HttpApi/httpapi.py" />
-        <option value="$PROJECT_DIR$/temp/protomsg.py" />
-        <option value="$PROJECT_DIR$/case/runcase.py" />
         <option value="$PROJECT_DIR$/case/test.py" />
         <option value="$PROJECT_DIR$/until/length.py" />
+        <option value="$PROJECT_DIR$/TestData/token.txt" />
+        <option value="$PROJECT_DIR$/until/img.py" />
         <option value="$PROJECT_DIR$/TestData/send_data.txt" />
+        <option value="$PROJECT_DIR$/TestData/recv_data.txt" />
+        <option value="$PROJECT_DIR$/until/readTxt.py" />
+        <option value="$PROJECT_DIR$/temp/protomsg.py" />
+        <option value="$PROJECT_DIR$/until/test.py" />
+        <option value="$PROJECT_DIR$/until/qiniu.py" />
         <option value="$PROJECT_DIR$/case/TcpTestCase.py" />
+        <option value="$PROJECT_DIR$/case/runcase.py" />
       </list>
     </option>
   </component>
@@ -378,10 +393,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="690" />
-    <option name="y" value="60" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -410,6 +425,11 @@
             <path>
               <item name="DCIM" type="b2602c69:ProjectViewProjectNode" />
               <item name="DCIM" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCIM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCIM" type="462c0819:PsiDirectoryNode" />
               <item name="temp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -432,7 +452,7 @@
     <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/TestWork/DCIM/until/mogo.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proxie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
@@ -461,7 +481,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TcpTestCase">
+  <component name="RunManager" selected="Python.runcase">
     <configuration name="TcpTestCase" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DCIM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -506,28 +526,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="length" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DCIM" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/until" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/until/length.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="protomsg" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DCIM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -542,6 +540,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp/protomsg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="qiniu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DCIM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/until" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/until/qiniu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -580,12 +600,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/until" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/until/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -597,17 +617,17 @@
     <list>
       <item itemvalue="Python.add_message" />
       <item itemvalue="Python.runcase" />
-      <item itemvalue="Python.TcpTestCase" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.TcpTestCase" />
       <item itemvalue="Python.protomsg" />
-      <item itemvalue="Python.length" />
+      <item itemvalue="Python.qiniu" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.runcase" />
+        <item itemvalue="Python.qiniu" />
         <item itemvalue="Python.TcpTestCase" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.runcase" />
-        <item itemvalue="Python.length" />
         <item itemvalue="Python.protomsg" />
       </list>
     </recent_temporary>
@@ -678,7 +698,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1663113" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16950959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -735,39 +755,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改了提交信息" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gevent/thread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/pickle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="1567" column="13" lean-forward="true" selection-start-line="1567" selection-start-column="13" selection-end-line="1567" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/data.csv" />
-    <entry file="file://$PROJECT_DIR$/case/TestCase_Two.py" />
-    <entry file="file://$PROJECT_DIR$/TestData/new_recv_data.txt" />
-    <entry file="file://$PROJECT_DIR$/case/daima.txt" />
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8265" column="34" selection-start-line="8265" selection-start-column="23" selection-end-line="8265" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/token.txt" />
-    <entry file="file://$PROJECT_DIR$/until/chinese.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/emoji/core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -775,18 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/until/qiniu.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="340" column="66" selection-start-line="340" selection-start-column="66" selection-end-line="340" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1408">
-          <caret line="4657" column="6" selection-start-line="4657" selection-start-column="6" selection-end-line="4657" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -806,13 +785,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/proto_message.py" />
     <entry file="file://$PROJECT_DIR$/temp/reprot.py" />
-    <entry file="file://C:/Program Files/Python36/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8000">
-          <caret line="320" column="66" selection-start-line="320" selection-start-column="60" selection-end-line="320" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/concurrent/futures/thread.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2475">
@@ -830,31 +802,10 @@
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="5089" column="8" selection-start-line="5089" selection-start-column="8" selection-end-line="5089" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/queue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="146" column="8" selection-start-line="146" selection-start-column="8" selection-end-line="146" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/internals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="4840" selection-start-line="4840" selection-end-line="4840" />
         </state>
       </provider>
     </entry>
@@ -867,13 +818,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/case/NewTestCase.py" />
     <entry file="file://$PROJECT_DIR$/temp/sever.py" />
-    <entry file="file://C:/Program Files/Python36/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="915" selection-start-line="915" selection-end-line="915" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/httpapi.py" />
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/pymongo/cursor.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -903,20 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/token.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/result.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/until/send_email.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -924,13 +854,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/case/text.py" />
     <entry file="file://$PROJECT_DIR$/temp/message_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -948,17 +872,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/until/readTxt.py">
+    <entry file="file://$PROJECT_DIR$/case/test.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HttpApi/httpapi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="340" lean-forward="true" selection-start-line="340" selection-end-line="340" />
+        <state relative-caret-position="-6275">
+          <caret line="1038" column="40" selection-start-line="1038" selection-start-column="31" selection-end-line="1038" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -969,51 +887,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp/protomsg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="138" column="51" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
-          <folding>
-            <element signature="e#105#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/recv_data.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/runcase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/until/length.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-          <folding>
-            <marker date="1567576618143" expanded="true" signature="123:262" ph="..." />
-          </folding>
+        <state relative-caret-position="350">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/image/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/PIL/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/6286D3A9-7384-47CF-A7BD-AF2A49E33A9F.JPG" />
+    <entry file="file://C:/Program Files/Python36/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="922" column="23" selection-start-line="922" selection-start-column="23" selection-end-line="922" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="585" selection-start-line="585" selection-end-line="585" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/urllib/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="276" selection-start-line="276" selection-end-line="276" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/until/img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestData/token.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="320" selection-start-line="320" selection-end-line="320" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/until/readTxt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/requests_toolbelt/multipart/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/requests_toolbelt/multipart/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-363">
+          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/requests_toolbelt/multipart/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2188">
+          <caret line="91" column="59" lean-forward="true" selection-start-line="91" selection-start-column="59" selection-end-line="91" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/case/HttpTestCase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="242" column="30" lean-forward="true" selection-start-line="242" selection-start-column="30" selection-end-line="242" selection-end-column="30" />
+        <state relative-caret-position="1025">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
           <folding>
             <element signature="e#106#115#0" expanded="true" />
             <marker date="1567495773195" expanded="true" signature="804:814" ph="..." />
@@ -1022,16 +983,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HttpApi/httpapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/internals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118900">
+          <caret line="4840" selection-start-line="4840" selection-end-line="4840" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7200">
+          <caret line="378" selection-start-line="378" selection-end-line="378" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/until/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/until/qiniu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/protomsg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="151" selection-start-line="151" selection-end-line="151" />
+          <folding>
+            <element signature="e#105#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TestData/send_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestData/recv_data.txt">
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestData/result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/case/TcpTestCase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="99" column="34" lean-forward="true" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
+        <state relative-caret-position="236">
+          <caret line="317" column="58" selection-start-line="317" selection-start-column="58" selection-end-line="317" selection-end-column="58" />
           <folding>
             <element signature="e#107#121#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/runcase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>

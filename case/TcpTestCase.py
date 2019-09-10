@@ -27,6 +27,7 @@ from until.length import length
 from until.chinese import chineseText
 from until.readTxt import read_file
 from concurrent.futures import ThreadPoolExecutor, wait
+from until.img import get_img
 
 
 global File
@@ -85,9 +86,59 @@ class Function():
         result.update(Code=code)
         result.update(Responsetime= round(responsetime, 2))
         file = open(self.datafile, 'a', encoding='utf-8')
-        file.write(str(result))
+        file.write(u'%s' % str(result))
         file.write('\n')
         file.close()
+
+    # analysis recv data
+    def analysis_data(self):
+        data = self.client.recv(self.length)
+        FRIST_DATA = b''
+        SECOND_DATA = b''
+        NUM_START = data.count(Start)
+        NUM_END = data.count(End)
+        if data[:2] == Start and data[-2:] == End and NUM_END == NUM_START == 1:
+            if b'HEARTBEAT_ACK' not in data:
+                recv_data = data[6:-2]
+                self.proto_message.ParseFromString(recv_data)
+                result = replay_send_receve(self.proto_message)
+            else:
+                recv_data = data[6:-2]
+                self.proto_message.ParseFromString(recv_data)
+                result = heart_receve(self.proto_message)
+        elif NUM_START == NUM_END and NUM_START >= 2:
+            NUM = 0
+            for i in range(NUM_START):
+                temp = NUM
+                NUM = data.find(Start, NUM + 1)
+                if i != NUM_START - 1:
+                    recv_data = data[temp: NUM]
+                else:
+                    recv_data = data[temp: NUM] + b'$'
+                recv_data = recv_data[6:-2]
+                if b'HEARTBEAT_ACK' not in recv_data:
+                    self.proto_message.ParseFromString(recv_data)
+                    result = replay_send_receve(self.proto_message)
+                else:
+                    self.proto_message.ParseFromString(recv_data)
+                    result = heart_receve(self.proto_message)
+        else:
+            if NUM_START == 1 and NUM_END == 0:
+                FRIST_DATA = data
+                pass
+            elif NUM_START == NUM_END == 0:
+                pass
+            else:
+                SECOND_DATA = data
+                recv_data = FRIST_DATA + SECOND_DATA
+                recv_data = recv_data[6:-2]
+                if b'HEARTBEAT_ACK' not in recv_data:
+                    self.proto_message.ParseFromString(recv_data)
+                    result = replay_send_receve(self.proto_message)
+                else:
+                    self.proto_message.ParseFromString(recv_data)
+                    result = heart_receve(self.proto_message)
+        return result
 
     # Send Heartbeat
     def heartbeat(self, username):
@@ -96,8 +147,10 @@ class Function():
         self.client.send(send_message)
         data = self.client.recv(self.length)
 
-    # 接收消息
+    # recv meassage
     def Recv(self, username, num):
+        Start = b'$_'
+        End = b'_$'
         pool = ThreadPoolExecutor(max_workers=num)
         threads = []
         self.Link(username)
@@ -161,7 +214,7 @@ def Function_concurrent_sendmessage(concurrentNum, tousername):
     for i in range(concurrentNum):
         TXT = [chineseText(random.randint(1, 3288)),
                ''.join(random.sample(list(emoji.unicode_codes.EMOJI_UNICODE.values()), 10)),
-               json.dumps({"width": 1280, "url": "0D6DD481-EB5B-428C-99D5-F1C9FA612573.JPG", "height": 960})]
+               get_img()]
         content = random.choice(TXT)
         if str(content).startswith('{') and str(content).endswith('}'):
             try:
@@ -262,7 +315,8 @@ def Result_concurrent_testing(threadnum, internTime, duration):
     total_sumTime = totalDF['responseTime'].sum()
     TotalResult = (TotalResult.rename(columns={'responseTime': ''}))
     with open(result_file, 'w+') as f:
-        f.write(f'When thread is: {threadnum}, Duration is:{duration} seconds, WaitTime is: {internTime} seconds and send area is txt.\n'
+        f.write(f'EXECUTE TIME:{datetime.datetime.now()}\n'
+                f'When thread is: {threadnum}, Duration is:{duration} seconds, WaitTime is: {internTime} seconds and send area is txt.\n'
                 f'Message sent successfully: {len(data_send_success_list)}; Message received successfully: {len(data_recv)}\n'
                 f'Whether messages sent and received are lost: {isintegrity}\n'
                 f'The total running time is: {total_sumTime} ms\n'
@@ -282,3 +336,5 @@ def Result_concurrent_testing(threadnum, internTime, duration):
         f.write('Recv message data is analyzed as follows:')
         f.write(str(recvResult))
         f.write('\n')
+
+
