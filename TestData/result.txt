@@ -1,36 +1,36 @@
-EXECUTE TIME:2019-09-10 09:09:49.123894
-When thread is: 5, Duration is:1 seconds, WaitTime is: 0 seconds and send area is txt.
-Message sent successfully: 5; Message received successfully: 5
+EXECUTE TIME:2019-09-19 17:22:08.089744
+When thread is: 100, Duration is:3 seconds, WaitTime is: 0.1 seconds and send area is txt.
+Message sent successfully: 98; Message received successfully: 98
 Whether messages sent and received are lost: True
-The total running time is: 556.51 ms
-The total sending time is 552.54 ms
-The total time accepted is 3.9699999999999998 ms.
+The total running time is: 114403.31 ms
+The total sending time is 112066.28 ms
+The total time accepted is 2337.0299999999997 ms.
 Because of thread receiving problem (data receiving after heartbeat is sent misses), the missed message is always: 0 
 ,the missed message id is:
-Data analysis of receiving, sending and receiving information is as follows:                 
-count    5.000000
-mean   111.302000
-std     87.561769
-min     37.900000
-25%     39.870000
-50%    111.710000
-75%    113.700000
-max    253.330000
-Send message data is analyzed as follows:                 
-count    5.000000
-mean   110.508000
-std     87.557942
-min     36.900000
-25%     38.900000
-50%    111.710000
-75%    112.700000
-max    252.330000
-Recv message data is analyzed as follows:              
-count  5.00000
-mean   0.79400
-std    0.44405
-min    0.00000
-25%    0.97000
-50%    1.00000
-75%    1.00000
-max    1.00000
+Data analysis of receiving, sending and receiving information is as follows:                  
+count    98.000000
+mean   1167.380714
+std    1298.997033
+min     182.590000
+25%     255.917500
+50%     582.390000
+75%    1546.635000
+max    5377.070000
+Send message data is analyzed as follows:                  
+count    98.000000
+mean   1143.533469
+std    1292.408294
+min     158.580000
+25%     236.272500
+50%     571.025000
+75%    1539.192500
+max    5361.110000
+Recv message data is analyzed as follows:                 
+count   98.000000
+mean    23.847245
+std     51.267512
+min      0.000000
+25%      0.495000
+50%      8.110000
+75%     15.720000
+max    394.500000

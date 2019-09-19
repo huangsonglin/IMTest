@@ -19,7 +19,7 @@ from until.mysql import Mysql
 from until.mogo import mgdb, return_mgdb
 from concurrent.futures import ThreadPoolExecutor, wait
 
-class unitest_http_api(unittest.TestCase):
+class Test_http_api(unittest.TestCase):
 
 	tokenfile = rootPath + r'\TestData\token.txt'
 	clientType = random.choice(['IOS', 'ANDROID'])

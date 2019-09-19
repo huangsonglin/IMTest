@@ -16,7 +16,10 @@ def read_file(file):
     data = []
     if os.path.exists(file):
         with open(file, encoding='utf-8', errors='ignore') as f:
-            for line in f.readlines():
+            # 文件去重处理
+            origindata = f.readlines()
+            origindata = list(set(origindata))
+            for line in origindata:
                 if line != '\n':
                     line = line.replace('\n', '')
                     json_data = (eval(line))

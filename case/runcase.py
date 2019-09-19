@@ -10,13 +10,13 @@ curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
 import unittest
-from case.TcpTestCase import *
-from case.HttpTestCase import *
+from case.test_tcp_case import *
+from case.test_http_api_case import *
 
 if __name__ == '__main__':
-	# wirte_token.tokenList()
-	# time.sleep(5)
-	Result_concurrent_testing(5, 0, 1)
-	# suit = unittest.TestLoader().loadTestsFromTestCase(unitest_http_api)
-	# suit = unittest.TestSuite(suit)
-	# unittest.TextTestRunner(verbosity=2).run(suit)
+	wirte_token.tokenList()
+	time.sleep(5)
+	Result_concurrent_testing(10000, 0, 1)
+	suit = unittest.TestLoader().loadTestsFromTestCase(unitest_http_api)
+	suit = unittest.TestSuite(suit)
+	unittest.TextTestRunner(verbosity=2).run(suit)
