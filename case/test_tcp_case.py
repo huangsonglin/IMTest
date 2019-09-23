@@ -169,6 +169,11 @@ class Function():
 
 	# recv meassage
 	def Recv(self, username):
+		"""
+		逻辑：A用户给B用户发消息，服务端收到A的消息，反馈message_ack,表示服务器接收成功，A端上收到message_ack，标记发送成功，
+		服务器转发消息给B，B标记以读，说明发送成功，如果B没有标记以读，我后台就会补发
+		结果：接收的消息存在重复性
+		"""
 		End = b'_$'
 		self.Link(username)
 		btime = time.time()

@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c2b25b3-fe7e-4751-870c-484c346f0f5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TestData/wrong.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/until/word_spilt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestData/recv_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestData/recv_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestData/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestData/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestData/send_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestData/send_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestData/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestData/token.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/HttpTestCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_http_api_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/TcpTestCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/concurrentFunction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/runcase.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/runcase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/protomsg.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/protomsg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/until/readTxt.py" beforeDir="false" afterPath="$PROJECT_DIR$/until/readTxt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/test_tcp_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_tcp_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/until/word_spilt.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,27 +109,28 @@
     <session id="-7031873">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="27" />
+          <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="10" />
-          <entry key="project.open.time.1" value="8" />
+          <entry key="project.open.time.1" value="9" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="169" />
           <entry key="dummy" value="89" />
-          <entry key="py" value="39482" />
+          <entry key="py" value="39555" />
           <entry key="txt" value="200" />
         </counts>
       </usages-collector>
@@ -146,7 +138,7 @@
         <counts>
           <entry key="CSV" value="169" />
           <entry key="PLAIN_TEXT" value="289" />
-          <entry key="Python" value="39481" />
+          <entry key="Python" value="39554" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -172,11 +164,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/case/runcase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="500">
+              <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -193,8 +185,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestData/recv_data.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-737">
-              <caret line="538" column="32" lean-forward="true" selection-start-line="538" selection-start-column="32" selection-end-line="538" selection-end-column="32" />
+            <state relative-caret-position="284">
+              <caret line="1035" column="7" selection-start-line="1035" selection-start-column="7" selection-end-line="1035" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -202,8 +194,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestData/send_data.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1837">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="395">
+              <caret line="96" column="89" selection-start-line="96" selection-start-column="85" selection-end-line="96" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -213,30 +205,15 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/case/test_tcp_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="354" lean-forward="true" selection-start-line="354" selection-end-line="354" />
+            <state relative-caret-position="283">
+              <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
               <folding>
                 <element signature="e#107#121#0" expanded="true" />
-                <element signature="e#2177#2729#0" />
-                <element signature="e#2786#3611#0" />
-                <element signature="e#5310#5614#0" />
-                <element signature="e#4372#4397#0" />
-                <marker date="1568884928853" expanded="true" signature="5236:5239" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/until/word_spilt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-              <folding>
-                <marker date="1568884568327" expanded="true" signature="285:293" ph="..." />
+                <element signature="e#5600#5625#0" />
+                <marker date="1569202525350" expanded="true" signature="5236:5239" ph="..." />
               </folding>
             </state>
           </provider>
@@ -245,7 +222,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/until/readTxt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="600">
               <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
             </state>
           </provider>
@@ -262,8 +239,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ASK</find>
-      <find>5260:5263:22</find>
       <find>5248</find>
       <find>\U0001f9d6🏿🤾🏼\u200d♀️\U0001f9dc👱\u200d♀️🕓🏃🏾\u200d♂️🍯\U0001f9d6🏽\u200d♀️🗄♒</find>
       <find>撤</find>
@@ -292,6 +267,8 @@
       <find>5278:5292:6</find>
       <find>w+</find>
       <find>5256:5265:131</find>
+      <find>连接成功</find>
+      <find>5249:5251:62</find>
     </findStrings>
     <replaceStrings>
       <replace>40000000000</replace>
@@ -318,7 +295,6 @@
     <setting file="file://$PROJECT_DIR$/until/qiniu.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/until/img.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/until/readTxt.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/until/word_spilt.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/case/test_tcp_case.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/case/runcase.py" root0="SKIP_INSPECTION" />
   </component>
@@ -403,6 +379,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -444,7 +421,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -697,12 +673,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17910448" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18230277" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" x="21" y="818" width="1899" height="180" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.44733986" />
+      <window_info anchor="bottom" x="21" y="818" width="1899" height="180" id="Run" order="2" sideWeight="0.49840087" weight="0.44733986" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984799" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -711,7 +687,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.4924078" />
-      <window_info anchor="bottom" x="22" y="364" width="1876" height="311" id="Terminal" order="11" weight="0.33767644" />
+      <window_info active="true" anchor="bottom" x="22" y="364" width="1876" height="311" id="Terminal" order="11" visible="true" weight="0.33767644" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -978,74 +954,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/origin_data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="172434" selection-start-column="172434" selection-end-column="172455" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TestData/origin_data.txt" />
     <entry file="file://$PROJECT_DIR$/case/concurrentFunction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="583">
           <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
-          <folding>
-            <element signature="e#107#121#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/until/word_spilt.py">
+    <entry file="file://$PROJECT_DIR$/until/word_spilt.py" />
+    <entry file="file://$PROJECT_DIR$/case/runcase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding>
-            <marker date="1568884568327" expanded="true" signature="285:293" ph="..." />
-          </folding>
+        <state relative-caret-position="500">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/wrong.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/until/readTxt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/test_tcp_case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="354" lean-forward="true" selection-start-line="354" selection-end-line="354" />
-          <folding>
-            <element signature="e#107#121#0" expanded="true" />
-            <element signature="e#2177#2729#0" />
-            <element signature="e#2786#3611#0" />
-            <element signature="e#5310#5614#0" />
-            <element signature="e#4372#4397#0" />
-            <marker date="1568884928853" expanded="true" signature="5236:5239" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/send_data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1837">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/recv_data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-737">
-          <caret line="538" column="32" lean-forward="true" selection-start-line="538" selection-start-column="32" selection-end-line="538" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestData/result.txt">
@@ -1055,10 +977,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/runcase.py">
+    <entry file="file://$PROJECT_DIR$/TestData/wrong.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/until/readTxt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="600">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestData/recv_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="1035" column="7" selection-start-line="1035" selection-start-column="7" selection-end-line="1035" selection-end-column="7" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestData/send_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="96" column="89" selection-start-line="96" selection-start-column="85" selection-end-line="96" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/test_tcp_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
+          <folding>
+            <element signature="e#107#121#0" expanded="true" />
+            <element signature="e#5600#5625#0" />
+            <marker date="1569202525350" expanded="true" signature="5236:5239" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
