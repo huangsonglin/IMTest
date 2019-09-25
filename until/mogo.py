@@ -14,7 +14,7 @@ import datetime, time
 import re
 
 
-host = '47.100.189.151'
+host = '139.196.57.60'
 port = 27017
 
 

@@ -227,16 +227,24 @@ def Function_thread_testing(threaNum, internTime, duration):
 	tousername = random.randint(40000000000, 40000000049)
 	memberId = Mysql().reslut_replace(f'select id from user where username={tousername}')
 	for i in range(threaNum):
+		Vioce =  {"url":"D8CEE5F5-A3A1-4F2A-954B-9F0299EE69AE.amr","duration":5}
 		TXT = [chineseText(random.randint(1, 100)),
 			   ''.join(random.sample(list(emoji.unicode_codes.EMOJI_UNICODE.values()), 10)),
-			   get_img()]
+			   get_img(), json.dumps(Vioce)]
 		content = random.choice(TXT)
 		if str(content).startswith('{') and str(content).endswith('}'):
-			try:
-				json.loads(content)
-				contenType = "IMG"
-			except:
-				contenType = "TXT"
+			if "duration" in str(content) and '.amr' in str(content):
+				try:
+					json.loads(content)
+					contenType = "VOICE"
+				except:
+					contenType = "TXT"
+			else:
+				try:
+					json.loads(content)
+					contenType = "IMG"
+				except:
+					contenType = "TXT"
 		else:
 			contenType = "TXT"
 		fromuser = random.randint(40000000000, 40000000049)
@@ -360,3 +368,5 @@ def Result_concurrent_testing(threadnum, internTime, duration):
 
 
 
+if __name__ == '__main__':
+    Result_concurrent_testing(1,0,1)

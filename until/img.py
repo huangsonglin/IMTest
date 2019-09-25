@@ -41,3 +41,6 @@ def get_img():
     im = Image.open(imgpath + IMG)
     result = json.dumps({"width": im.size[0], "url": IMG, "height": im.size[1]})
     return result
+
+
+
