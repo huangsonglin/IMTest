@@ -49,7 +49,7 @@ def return_mgdb(table):
 	return stb
 
 if __name__ == '__main__':
-	sql = {"_id": "5260:5291:2"}
-	messageList = return_mgdb('userMessage:%s.' % 5260)
-	res = messageList.find(sql, {"_id":0, "content": 1}).distinct("content")
-	print(res)
+	sql = {"_id": "5258:5273:196"}
+	messageList = return_mgdb('userMessage:%s.' % 5258)
+	res = messageList.find_one(sql)
+	print(res['read'])

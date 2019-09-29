@@ -14,9 +14,9 @@ from case.test_tcp_case import *
 from case.test_http_api_case import *
 
 if __name__ == '__main__':
-	# wirte_token.tokenList()
+	wirte_token.tokenList()
 	# time.sleep(5)
 	# Result_concurrent_testing(10000, 0, 1)
-	suit = unittest.TestLoader().loadTestsFromTestCase(Test_http_api)
-	suit = unittest.TestSuite(suit)
-	unittest.TextTestRunner(verbosity=2).run(suit)
+	# suit = unittest.TestLoader().loadTestsFromTestCase(Test_http_api)
+	# suit = unittest.TestSuite(suit)
+	# unittest.TextTestRunner(verbosity=2).run(suit)

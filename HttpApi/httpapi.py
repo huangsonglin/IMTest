@@ -42,6 +42,7 @@ class Message_Controller():
 
 # 聊天室管理
 class Chat_Room_Controller():
+
     def __init__(self, clientType, version):
         self.clientType = clientType
         self.version = version

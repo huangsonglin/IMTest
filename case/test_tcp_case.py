@@ -28,6 +28,7 @@ from until.chinese import chineseText
 from until.readTxt import read_file
 from concurrent.futures import ThreadPoolExecutor, wait
 from until.img import get_img
+from until.mogo import mgdb, return_mgdb
 
 global File
 File = file
@@ -157,6 +158,27 @@ class Function():
 		file.write('\n')
 		file.close()
 
+	def return_send(self, fromusername, contentType, contentTxt, touserId, clientType):
+		message = Message_Protobuf(File).send(fromusername, contentType, contentTxt, touserId, clientType)
+		send_message = "$_".encode() + length(len(message)) + message + "_$".encode()
+		befortime = time.time()
+		self.client.send(send_message)
+		recv_data = self.client.recv(self.length)
+		aftertime = time.time()
+		recv_data = recv_data[6: -2]
+		self.proto_message.ParseFromString(recv_data)
+		result = replay_send_receve(self.proto_message)
+		# 毫秒级
+		responsetime = (aftertime - befortime) * 1000
+		if result['destinationId'] != 0:
+			code = 200
+		else:
+			result = repaly_link_receve(self.proto_message)
+			code = result['code']
+		result.update(Code=code)
+		result.update(Responsetime=round(responsetime, 2))
+		return result
+
 	# Send Heartbeat
 	def heartbeat(self, username):
 		message = Message_Protobuf(File).HEARTBEAT(username, "IOS")
@@ -220,6 +242,24 @@ class Function():
 			sf.close()
 		self.close()
 
+	def return_recv(self, username):
+		"""
+		逻辑：A用户给B用户发消息，服务端收到A的消息，反馈message_ack,表示服务器接收成功，A端上收到message_ack，标记发送成功，
+		服务器转发消息给B，B标记以读，说明发送成功，如果B没有标记以读，我后台就会补发
+		结果：接收的消息存在重复性
+		"""
+		End = b'_$'
+		self.Link(username)
+		while True:
+			sf = open(self.recv_datafile, 'a', encoding='utf-8')
+			data = self.client.recv(self.length)
+			if not data:
+				break
+			else:
+				resultList = self.analysis_data(data)
+				return resultList
+		self.close()
+
 
 # 多线程并发压力测试函数
 def Function_thread_testing(threaNum, internTime, duration):
@@ -259,6 +299,38 @@ def Function_thread_testing(threaNum, internTime, duration):
 		threads.append(sendThread)
 	for t in threads:
 		t.join(duration)
+
+# 接收2分中之内的历史消息
+def recv_message_history():
+	fromuser = random.randint(40000000000, 40000000049)
+	while True:
+		member = random.randint(40000000000, 40000000049)
+		if member != fromuser:
+			memberId = memberId = Mysql().reslut_replace(f'select id from user where username={member}')
+			break
+	TXT = [chineseText(random.randint(1, 100)),
+		   ''.join(random.sample(list(emoji.unicode_codes.EMOJI_UNICODE.values()), 10))]
+	content = random.choice(TXT)
+	sendresult = Function().return_send(fromuser, "TXT", content, int(memberId), "IOS")
+	waitTime = random.randint(1)
+	time.sleep(waitTime)
+	recvresultList = Function().return_recv(member)
+	SendMessageId = sendresult['content']['MessageId']
+	RecvMessageList = []
+	sql = {"_id": f"{SendMessageId}"}
+	messageList = return_mgdb('userMessage:%s.' % memberId)
+	res = messageList.find_one(sql)
+	if not res['read']:
+		for recvresult in recvresultList:
+			if 'content' in list(recvresult.keys()):
+				RecvMessageId = recvresult['content']['MessageId']
+				RecvMessageList.append(RecvMessageId)
+	try:
+		assert SendMessageId in RecvMessageList
+	except:
+		raise ConnectionError('接收历史消息失败')
+
+
 
 
 # 多线程并发压力测试结果分析
@@ -369,4 +441,4 @@ def Result_concurrent_testing(threadnum, internTime, duration):
 
 
 if __name__ == '__main__':
-    Result_concurrent_testing(1,0,1)
+    recv_message_history()
